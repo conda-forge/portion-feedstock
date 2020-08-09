@@ -1,17 +1,17 @@
 {% set name = "portion" %}
-{% set version = "2.0.2" %}
+{% set version = "2.1.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 5b9200a360c576b342f653502cf4dd04e327a0f385e97265a70cc7fa8ad0d47f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 58d09b350b22639e33d06385383a96cece920a4315919d55d70108e57edf27b0
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -20,17 +20,18 @@ requirements:
     - python
   run:
     - python
+    - sortedcontainers >=2.2.2,<3
 
 test:
   imports:
     - portion
 
 about:
-  home: "https://github.com/AlexandreDecan/portion"
-  license: "LGPL-3.0-only"
+  home: https://github.com/AlexandreDecan/portion
+  license: LGPL-3.0-only
   license_family: LGPL
   license_file: LICENSE.txt
-  summary: "Python data structure and operations for intervals"
+  summary: Python data structure and operations for intervals
 
 extra:
   recipe-maintainers:
