@@ -5,11 +5,9 @@ Home: https://github.com/AlexandreDecan/portion
 
 Package license: LGPL-3.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/portion-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python data structure and operations for intervals
-
-
 
 Current build status
 ====================
