@@ -1,5 +1,5 @@
 {% set name = "portion" %}
-{% set version = "2.1.3.post1" %}
+{% set version = "2.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 36cf8e8085ed6561a73e893236ebc9ac30e876a9990ae65167376edd624ffaea
+  sha256: 58b2792e6e9837a2d55a97d459b940c90fb08b5fba774f524e9359727c80e7b4
 
 build:
   number: 0
