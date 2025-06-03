@@ -10,7 +10,7 @@ source:
   sha256: 44b1f7d57e052993c4157e519dc447e57b87a4e5e00a77c1c50e7044104e53c6
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -18,12 +18,15 @@ requirements:
   host:
     - pip
     - hatchling
-    - python >=3.6
+    - python >={{ python_min }}
+
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - sortedcontainers >=2.2.2,<3
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - portion
 
